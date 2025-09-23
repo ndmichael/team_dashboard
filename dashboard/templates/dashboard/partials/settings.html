@@ -1,0 +1,12 @@
+<h3>Settings</h3>
+<button id="toggleDark" class="btn btn-secondary">Toggle Dark Mode</button>
+<script>
+document.getElementById('toggleDark').addEventListener('click', () => {
+  document.body.classList.toggle('bg-dark');
+  document.body.classList.toggle('text-white');
+  localStorage.setItem('darkMode', document.body.classList.contains('bg-dark'));
+});
+if(localStorage.getItem('darkMode') === 'true') {
+  document.body.classList.add('bg-dark', 'text-white');
+}
+</script>
