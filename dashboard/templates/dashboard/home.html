@@ -1,41 +1,29 @@
-{% extends "dashboard/base.html" %}
+
+ {% extends "dashboard/base.html" %}
 
 {% block content %}
-<h2>Welcome, {{ user.username }} 👋</h2>
+<h2>Welcome 👋</h2>
 
-<ul class="nav nav-tabs mt-3" id="dashboardTabs" role="tablist">
-    <li class="nav-item">
-        <a class="nav-link active" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab">Profile</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="projects-tab" data-bs-toggle="tab" href="#projects" role="tab">Projects</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="settings-tab" data-bs-toggle="tab" href="#settings" role="tab">Settings</a>
-    </li>
-</ul>
+<!-- Main Content -->
+<main class="flex-grow-1 p-4">
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="profile" role="tabpanel">
+            <div class="content-card">
+                {% include "dashboard/partials/profile.html" %}
+            </div>
+        </div>
+        <div class="tab-pane fade" id="projects" role="tabpanel">
+            <div class="content-card">
+                {% include "dashboard/partials/projects.html" %}
+            </div>
+        </div>
+        <div class="tab-pane fade" id="settings" role="tabpanel">
+            <div class="content-card">
+                {% include "dashboard/partials/settings.html" %}
+            </div>
+        </div>
+    </div>
+</main>
 
-<div class="tab-content p-3 border border-top-0 bg-white shadow-sm rounded-bottom">
-    <div class="tab-pane fade show active" id="profile" role="tabpanel">
-        <h5>Profile Info</h5>
-        <p>Email: {{ user.email }}</p>
-        <p>Joined: {{ user.date_joined|date:"M d, Y" }}</p>
-    </div>
-    <div class="tab-pane fade" id="projects" role="tabpanel">
-        <h5>Projects</h5>
-        <table class="table table-striped">
-            <tr><th>Name</th><th>Status</th></tr>
-            {% for project in projects %}
-                <tr><td>{{ project.name }}</td><td>{{ project.status }}</td></tr>
-            {% empty %}
-                <tr><td colspan="2">No projects yet</td></tr>
-            {% endfor %}
-        </table>
-    </div>
-    <div class="tab-pane fade" id="settings" role="tabpanel">
-        <h5>Settings</h5>
-        <button id="toggleDark" class="btn btn-secondary">Toggle Dark Mode</button>
-    </div>
-</div>
 {% endblock %}
 
