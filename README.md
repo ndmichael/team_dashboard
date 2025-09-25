@@ -17,11 +17,11 @@ This project demonstrates how to simulate a **Single Page Application (SPA)** fe
 ![Profile Screenshot Darkmode](screenshots/Team-Profile-Darkmode.png)
 
 **Project Tab**
-![Settings Screenshot](screenshots/settings.png)
+![Settings Screenshot](screenshots/Team-Dashboard3.png)
 
 ## ⚙️ Setup
 ```bash
-git clone https://github.com/your-username/team_dashboard.git
+git clone https://github.com/ndmichael/team_dashboard.git
 cd team_dashboard
 pip install -r requirements.txt
 python manage.py migrate
