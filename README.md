@@ -8,7 +8,16 @@ This project demonstrates how to simulate a **Single Page Application (SPA)** fe
 - Lightweight, no heavy frontend framework required
 
 ## 📸 Demo
-![Dashboard Demo](screenshots/demo.gif)
+![Dashboard Demo](screenshots/spa_team_dashboard.gif)
+
+**Profile Tab Light Mode**
+![Profile Screenshot Lightmode](screenshots/Team-Profile-Lightmode.png)
+
+**Profile Tab Dark Mode**
+![Profile Screenshot Darkmode](screenshots/Team-Profile-Darkmode.png)
+
+**Project Tab**
+![Settings Screenshot](screenshots/settings.png)
 
 ## ⚙️ Setup
 ```bash
