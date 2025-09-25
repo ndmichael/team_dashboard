@@ -41,9 +41,12 @@
         <!-- Main Content -->
         <main class="flex-grow-1 p-4">
             <!-- Toggle Button for small screens -->
-            <button class="btn btn-primary mb-3" id="sidebarToggle">
-                ☰ Menu
-            </button>
+             <!-- Toggle Button for small screens -->
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-primary mb-3" id="sidebarToggle">
+                    ☰ Menu
+                </button>
+            </div>
             {% block content %}{% endblock %}
         </main>
     </div>
