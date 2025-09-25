@@ -5,25 +5,23 @@
 <h2>Welcome 👋</h2>
 
 <!-- Main Content -->
-<main class="flex-grow-1 p-4">
-    <div class="tab-content">
-        <div class="tab-pane fade show active" id="profile" role="tabpanel">
-            <div class="content-card">
-                {% include "dashboard/partials/profile.html" %}
-            </div>
-        </div>
-        <div class="tab-pane fade" id="projects" role="tabpanel">
-            <div class="content-card">
-                {% include "dashboard/partials/projects.html" %}
-            </div>
-        </div>
-        <div class="tab-pane fade" id="settings" role="tabpanel">
-            <div class="content-card">
-                {% include "dashboard/partials/settings.html" %}
-            </div>
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="profile" role="tabpanel">
+        <div class="content-card">
+            {% include "dashboard/partials/profile.html" %}
         </div>
     </div>
-</main>
+    <div class="tab-pane fade" id="projects" role="tabpanel">
+        <div class="content-card">
+            {% include "dashboard/partials/projects.html" %}
+        </div>
+    </div>
+    <div class="tab-pane fade" id="settings" role="tabpanel">
+        <div class="content-card">
+            {% include "dashboard/partials/settings.html" %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 
